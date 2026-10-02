@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro | Neuroplay</title>
+
+    <link rel="stylesheet" href="../css/cadastro.css">
+</head>
+
+<body>
+
+    <main class="cadastro-container">
+
+        <!-- Logo -->
+        <div class="logo">
+
+            <h1 class="nome-logo" aria-label="Neuroplay">
+                <span class="azul">N</span>
+                <span class="vermelho">E</span>
+                <span class="amarelo">U</span>
+                <span class="verde">R</span>
+                <span class="azul">O</span>
+                <span class="vermelho">P</span>
+                <span class="amarelo">L</span>
+                <span class="verde">A</span>
+                <span class="azul">Y</span>
+            </h1>
+
+        </div>
+
+        <!-- Área de cadastro -->
+        <section class="cadastro">
+
+            <h2>Crie sua conta</h2>
+
+            <p class="subtitulo">
+                Cadastre-se para acompanhar seu desempenho no Neuroplay.
+            </p>
+
+            <form id="formCadastro">
+
+                <!-- Nome -->
+                <div class="campo">
+
+                    <label for="nome">
+                        Nome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- E-mail -->
+                <div class="campo">
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Senha -->
+                <div class="campo">
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+                    <div class="campo-senha">
+
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Crie uma senha"
+                            autocomplete="new-password"
+                            minlength="6"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="mostrar-senha"
+                            data-input="senha"
+                            aria-label="Mostrar senha"
+                        >
+                            Mostrar
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Confirmar senha -->
+                <div class="campo">
+
+                    <label for="confirmarSenha">
+                        Confirmar senha
+                    </label>
+
+                    <div class="campo-senha">
+
+                        <input
+                            type="password"
+                            id="confirmarSenha"
+                            name="confirmarSenha"
+                            placeholder="Digite sua senha novamente"
+                            autocomplete="new-password"
+                            minlength="6"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="mostrar-senha"
+                            data-input="confirmarSenha"
+                            aria-label="Mostrar senha"
+                        >
+                            Mostrar
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Mensagem de erro/sucesso -->
+                <p id="mensagem" aria-live="polite"></p>
+
+
+                <!-- Botão -->
+                <button type="submit" id="btnCadastrar">
+                    CADASTRAR
+                </button>
+
+            </form>
+
+
+            <!-- Link para login -->
+            <p class="possui-conta">
+                Já possui uma conta?
+                <a href="login.html">Entrar</a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="../scripts/cadastro.js"></script>
+
+</body>
+
+</html>

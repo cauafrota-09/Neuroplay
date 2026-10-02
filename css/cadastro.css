@@ -1,0 +1,343 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==============================
+   PALETA NEUROPLAY
+================================= */
+
+:root {
+    --azul: #1976D2;
+    --vermelho: #E53935;
+    --amarelo: #FBC02D;
+    --verde: #43A047;
+
+    --azul-escuro: #1259A3;
+
+    --fundo: #F7F8FA;
+    --branco: #FFFFFF;
+
+    --texto: #292D32;
+    --texto-secundario: #60646C;
+
+    --borda: #D9DDE3;
+}
+
+
+/* ==============================
+   PÁGINA
+================================= */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+
+/* ==============================
+   CONTAINER PRINCIPAL
+================================= */
+
+.cadastro-container {
+    width: 100%;
+    max-width: 460px;
+}
+
+
+/* ==============================
+   LOGO
+================================= */
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.nome-logo {
+    display: flex;
+    justify-content: center;
+
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+
+.azul {
+    color: var(--azul);
+}
+
+.vermelho {
+    color: var(--vermelho);
+}
+
+.amarelo {
+    color: var(--amarelo);
+}
+
+.verde {
+    color: var(--verde);
+}
+
+
+/* ==============================
+   CARD DE CADASTRO
+================================= */
+
+.cadastro {
+    width: 100%;
+
+    padding: 36px;
+
+    background-color: var(--branco);
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+.cadastro h2 {
+    text-align: center;
+
+    font-size: 1.7rem;
+
+    margin-bottom: 8px;
+}
+
+
+.subtitulo {
+    text-align: center;
+
+    color: var(--texto-secundario);
+
+    font-size: 0.95rem;
+    line-height: 1.5;
+
+    margin-bottom: 28px;
+}
+
+
+/* ==============================
+   CAMPOS
+================================= */
+
+.campo {
+    margin-bottom: 20px;
+}
+
+
+.campo label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+
+.campo input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid var(--borda);
+    border-radius: 9px;
+
+    font-size: 1rem;
+
+    color: var(--texto);
+    background-color: var(--branco);
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.campo input::placeholder {
+    color: #989CA3;
+}
+
+
+.campo input:focus {
+    border-color: var(--azul);
+
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.12);
+}
+
+
+/* ==============================
+   SENHA
+================================= */
+
+.campo-senha {
+    position: relative;
+}
+
+
+.campo-senha input {
+    padding-right: 85px;
+}
+
+
+.mostrar-senha {
+    position: absolute;
+
+    right: 12px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+    background: none;
+
+    color: var(--azul);
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* ==============================
+   MENSAGENS
+================================= */
+
+#mensagem {
+    min-height: 20px;
+
+    margin-bottom: 12px;
+
+    text-align: center;
+
+    font-size: 0.9rem;
+}
+
+
+.mensagem-erro {
+    color: var(--vermelho);
+}
+
+
+.mensagem-sucesso {
+    color: var(--verde);
+}
+
+
+/* ==============================
+   BOTÃO CADASTRAR
+================================= */
+
+#btnCadastrar {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: var(--azul);
+    color: var(--branco);
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    letter-spacing: 0.8px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+#btnCadastrar:hover {
+    background-color: var(--azul-escuro);
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 5px 14px rgba(25, 118, 210, 0.20);
+}
+
+
+#btnCadastrar:focus-visible {
+    outline: 3px solid var(--amarelo);
+    outline-offset: 3px;
+}
+
+
+/* ==============================
+   LINK LOGIN
+================================= */
+
+.possui-conta {
+    margin-top: 24px;
+
+    text-align: center;
+
+    color: var(--texto-secundario);
+
+    font-size: 0.95rem;
+}
+
+
+.possui-conta a {
+    color: var(--azul);
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+.possui-conta a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 520px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+
+    .cadastro {
+        padding: 28px 22px;
+    }
+
+
+    .nome-logo {
+        font-size: 2.1rem;
+        letter-spacing: 2px;
+    }
+
+}

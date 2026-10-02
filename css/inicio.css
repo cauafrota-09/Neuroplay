@@ -1,0 +1,181 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==============================
+   PALETA DO NEUROPLAY
+================================= */
+
+:root {
+    --azul: #1976D2;
+    --vermelho: #E53935;
+    --amarelo: #FBC02D;
+    --verde: #43A047;
+
+    --azul-escuro: #1259A3;
+
+    --fundo: #F7F8FA;
+    --branco: #FFFFFF;
+
+    --texto: #292D32;
+    --texto-secundario: #60646C;
+}
+
+
+/* ==============================
+   PÁGINA
+================================= */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+
+/* ==============================
+   CONTEÚDO PRINCIPAL
+================================= */
+
+.inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 55px;
+
+    width: 100%;
+    padding: 30px;
+}
+
+
+/* ==============================
+   LOGO
+================================= */
+
+.logo {
+    text-align: center;
+}
+
+.nome-logo {
+    display: flex;
+    justify-content: center;
+
+    font-size: 4rem;
+    font-weight: 800;
+
+    letter-spacing: 6px;
+}
+
+
+/* CORES DAS LETRAS */
+
+.azul {
+    color: var(--azul);
+}
+
+.vermelho {
+    color: var(--vermelho);
+}
+
+.amarelo {
+    color: var(--amarelo);
+}
+
+.verde {
+    color: var(--verde);
+}
+
+
+/* SLOGAN */
+
+.logo p {
+    margin-top: 14px;
+
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    color: var(--texto-secundario);
+}
+
+
+/* ==============================
+   BOTÃO
+================================= */
+
+#btnIniciar {
+    width: 230px;
+    padding: 16px;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: var(--azul);
+    color: var(--branco);
+
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* HOVER */
+
+#btnIniciar:hover {
+    background-color: var(--azul-escuro);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 18px rgba(25, 118, 210, 0.25);
+}
+
+
+/* NAVEGAÇÃO POR TECLADO */
+
+#btnIniciar:focus-visible {
+    outline: 3px solid var(--amarelo);
+    outline-offset: 4px;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 600px) {
+
+    .nome-logo {
+        font-size: 2.7rem;
+        letter-spacing: 3px;
+    }
+
+    .logo p {
+        font-size: 1rem;
+    }
+
+    #btnIniciar {
+        width: 200px;
+    }
+}
